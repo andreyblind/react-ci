@@ -17,11 +17,13 @@ jobs:
       - name: Install NPM packages
         run: npm ci    
       - name: Build project
-        run: npm run build    
+        run: npm run build  
+      - name: test
+        run: ls -la ./build    
       - name: Run tests
         run: npm run test
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v2
         with:
           name: production-files
-          path: ./build/index.html
+          path: ./build/
