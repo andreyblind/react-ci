@@ -19,7 +19,7 @@ jobs:
      run: npm ci
       
   - name: Build project
-    run: npm run build
+     run: npm run build
       
   - name: Run tests
      run: npm run test
@@ -27,5 +27,5 @@ jobs:
   - name: Upload production-ready build files
     uses: actions/upload-artifact@v2
     with:
-    name: production-files
-    path: ./build  
+     name: production-files
+     path: ./build  
