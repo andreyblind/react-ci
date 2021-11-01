@@ -20,13 +20,13 @@ jobs:
         run: npm run build  
       - name: Run tests
         run: npm run test
-      - name: Disable jekyll
-        run: touch ./build/.nojekyll
-      - name: Upload production-ready build files
-        uses: actions/upload-artifact@v2
-        with:
-          name: production-files
-          path: ./build/
+      # - name: Disable jekyll
+      #   run: touch ./build/.nojekyll
+      # - name: Upload production-ready build files
+      #   uses: actions/upload-artifact@v2
+      #   with:
+      #     name: production-files
+      #     path: ./build/
       # - name: Deploy to gh-pages
       #   uses: peaceiris/actions-gh-pages@v3
       #   with:
