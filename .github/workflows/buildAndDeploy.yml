@@ -21,7 +21,7 @@ jobs:
       - name: Run tests
         run: npm run test
       - name: Disable jekyll
-        run: touch .nojekyll
+        run: touch ./build/.nojekyll
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v2
         with:
