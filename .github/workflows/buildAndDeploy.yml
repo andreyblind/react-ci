@@ -22,15 +22,15 @@ jobs:
         run: npm run test
       - name: Disable jekyll
         run: touch ./build/.nojekyll
-      # - name: Upload production-ready build files
-      #   uses: actions/upload-artifact@v2
-      #   with:
-      #     name: production-files
-      #     path: ./build/
-
-
-      - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Upload production-ready build files
+        uses: actions/upload-artifact@v2
         with:
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          publish_dir: ./build
+          name: production-files
+          path: ./build/
+
+
+      # - name: Deploy to gh-pages
+      #   uses: peaceiris/actions-gh-pages@v3
+      #   with:
+      #     deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+      #     publish_dir: ./build
